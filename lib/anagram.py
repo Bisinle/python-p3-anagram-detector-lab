@@ -4,11 +4,9 @@ class Anagram:
         self.word = word
 
     def match(self, lisst):
-        initialiazed_word = list(self.word)
         new_list = list()
         for word in lisst:
-            put_word_in_list = list(word)
-            if sorted(put_word_in_list) == sorted(initialiazed_word):
+            if sorted(list(word)) == sorted(list(self.word)):
                 new_list.append(word)
 
         return new_list if len(new_list) > 0 and new_list[0] in lisst else []
